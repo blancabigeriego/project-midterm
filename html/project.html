@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/project.css" />
     <script
       src="https://kit.fontawesome.com/f11f09e05e.js"
       crossorigin="anonymous"
@@ -12,10 +13,10 @@
   </head>
   <body>
     <header id="header">
+      <img src="../images/circle.svg" alt="circle-logo" />
       <nav class="nav">
-        <img src="../images/circle.svg" alt="circle-logo" />
         <i class="fa-solid fa-bars"></i>
-        <ul>
+        <ul class="hidden">
           <li><a href="./home.html">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#services">Services</a></li>
@@ -25,10 +26,12 @@
     </header>
     <section id="project">
       <h1>Simplify</h1>
-      <h2>UI Design & App Development</h2>
-      <p>Completed on June 22, 2021</p>
+      <div class="details">
+        <h2>UI Design & App Development</h2>
+        <p><strong class="colour">Completed on</strong> June 22, 2021</p>
+      </div>
       <div class="project-container">
-        <img src="../images/1.jpg" alt="img-project" style="width: 150px" />
+        <img src="../images/1.jpg" alt="img-project" />
         <p>
           Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui
           esse pariatur duis deserunt mollit dolore cillum minim tempor enim.
@@ -71,34 +74,22 @@
     </section>
     <section id="projects">
       <h2>Other projects</h2>
-      <div class="projects-container">
-        <article>
-          <img
-            src="../images/4.jpg"
-            alt="project-picture"
-            style="width: 150px"
-          />
-          <h3>Orbit</h3>
+      <div class="box">
+        <article class="single-project">
+          <img src="../images/4.jpg" alt="project-picture" />
+          <h4>Orbit</h4>
           <p>UI design</p>
           <a href="_blank">Learn More</a>
         </article>
-        <article>
-          <img
-            src="../images/5.jpg"
-            alt="project-picture"
-            style="width: 150px"
-          />
-          <h3>Purify</h3>
+        <article class="single-project">
+          <img src="../images/5.jpg" alt="project-picture" />
+          <h4>Purify</h4>
           <p>UI/UX design</p>
           <a href="_blank">Learn More</a>
         </article>
-        <article>
-          <img
-            src="../images/6.jpg"
-            alt="project-picture"
-            style="width: 150px"
-          />
-          <h3>CryptoPie</h3>
+        <article class="single-project">
+          <img src="../images/6.jpg" alt="project-picture" />
+          <h4>CryptoPie</h4>
           <p>App devepolment</p>
           <a href="_blank">Learn More</a>
         </article>
@@ -106,10 +97,13 @@
     </section>
     <section id="cta">
       <h2>Do you have any questions?</h2>
-      <p>Let us know!</p>
+      <p>Let us help you!</p>
       <form>
-        <input type="text" placeholder="Enter your email" />
-        <button>Suscribe!</button>
+        <div class="envelope">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="text" placeholder="Enter your email" />
+        </div>
+        <button>Suscribe</button>
       </form>
     </section>
     <footer id="footer">

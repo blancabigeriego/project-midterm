@@ -1,0 +1,215 @@
+html{
+    margin: 0px;
+    padding: 0px;
+    background-color: #F2F4FC;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*header*/
+
+#header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F4FC;
+    z-index: 2;
+}
+#header img{
+    width: 3rem;
+    padding: 1rem;
+}
+.nav{
+    display: flex;
+    font-size: 1.55rem;
+    cursor:pointer;
+    color: #292E47;
+    padding: 1rem;
+   
+}
+.hidden{
+    display:none;
+}
+
+/*project*/
+#project {
+    position: relative;
+    top: 2rem;
+    margin: 2.7rem 1.2rem;
+}
+
+#project h1{
+    color:#292E47;
+    text-align: center;
+    margin-bottom: 1.7rem;
+}
+.details h2, .details p{
+    color:#6B708D;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.colour{
+    color:#292E47;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.project-container img{
+    width: 90%;
+    align-self: center;
+}
+.project-container p{
+    width: 90%;
+    align-self: center;
+    color:#6B708D;
+    font-size: 0.75rem;
+    text-align: left;
+    line-height: 1rem;
+}
+
+/*other projects*/
+#projects{
+    position: relative;
+    top: 2rem;
+    margin: 2.7rem 1.2rem;
+}
+#projects h2{
+    color:#292E47;
+    text-align: center;
+    margin-bottom: 1.7rem;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.single-project{
+    height: 30%;
+    width: 74%;
+    margin: 0px;
+    background-color: white;
+    align-self: center;
+    box-shadow: 0px 10px 50px rgb(0, 0, 0, .25);
+}
+
+
+.single-project > img{
+    width: 100%;
+    margin: 0px;
+}
+.single-project > h4{
+    margin: 0px;
+    padding: 5px 0px 10px 10px;
+    color:#292E47;
+    
+    
+}
+.single-project p{
+    margin-top: 0px;
+    padding: 0px 0px 10px 10px;
+    font-size: 0.5rem;
+    color: #292E47;
+    font-weight: 400;
+}
+.single-project a{
+    margin-top: 30px;
+    padding: 10px 0px 10px 10px;
+    text-decoration: none;
+    color: #072AC8;
+    font-size: 0.5em;
+    margin-top: 1em;
+}
+
+/*cta section*/
+/*cta*/
+#cta{
+    position: relative;
+    top: 5rem;
+    margin: 0 1rem;
+    background-color: #FFC600;
+    
+}
+
+#cta h2, #cta p{
+    color:#292E47;
+    padding: 15px;
+    text-align: center;
+}
+#cta form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.65rem;
+   position: relative;
+}
+
+#cta form input{
+    font-size: 0.5rem;
+    padding: 12px 0px 12px 50px;
+    border: none;
+    position: relative;
+    outline: none;
+}
+#cta form button{
+    font-size: 0.5rem;
+    padding: 12px 58px;
+    border: none;
+    background-color:  #072AC8;
+    color: #F2F4FC;
+    margin-bottom: 1rem;
+}
+
+.envelope i{
+    position: absolute;
+    margin-left: 12px;
+    z-index: 1;
+    top: 9px;
+
+}
+
+
+
+/*footer*/
+#footer{
+    position: relative;
+    top: 300px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.content p{
+    color:#6B708D;
+    font-size: 0.6rem;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+    
+}
+.links a{
+    color:#6B708D;
+    font-size: 0.6rem;
+    text-decoration: none;
+}
