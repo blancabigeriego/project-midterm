@@ -35,6 +35,48 @@ html{
     display:none;
 }
 
+/*project*/
+#project {
+    position: relative;
+    top: 2rem;
+    margin: 2.7rem 1.2rem;
+}
+
+#project h1{
+    color:#292E47;
+    text-align: center;
+    margin-bottom: 1.7rem;
+}
+.details h2, .details p{
+    color:#6B708D;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.colour{
+    color:#292E47;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.project-container img{
+    width: 90%;
+    align-self: center;
+}
+.project-container p{
+    width: 90%;
+    align-self: center;
+    color:#6B708D;
+    font-size: 0.75rem;
+    text-align: left;
+    line-height: 1rem;
+}
 
 
 
