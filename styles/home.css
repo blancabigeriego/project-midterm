@@ -215,7 +215,7 @@ html{
 .services-container article{
     background-color: white;
     width: 78%;
-    height: 40vh;
+   
     box-shadow: 0px 10px 50px rgb(0, 0, 0, .25);
 }
 .services-container article img{
@@ -242,6 +242,7 @@ html{
     text-decoration: none;
     font-size: 0.7rem;
     padding: 1rem;
+    margin-bottom: 1rem;
     
 
 }
@@ -253,12 +254,12 @@ html{
     top: 12.5rem;
     margin: 0 1rem;
     background-color: #FFC600;
-    height: 40vh;
+    
 }
 
 #cta h2, #cta p{
     color:#292E47;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
 }
 #cta form{
@@ -283,6 +284,7 @@ html{
     border: none;
     background-color:  #072AC8;
     color: #F2F4FC;
+    margin-bottom: 1rem;
 }
 
 .envelope i{
@@ -299,4 +301,30 @@ html{
 #footer{
     position: relative;
     top: 300px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.content p{
+    color:#6B708D;
+    font-size: 0.6rem;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+    
+}
+.links a{
+    color:#6B708D;
+    font-size: 0.6rem;
+    text-decoration: none;
 }
