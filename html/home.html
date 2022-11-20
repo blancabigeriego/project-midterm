@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/f11f09e05e.js"
       crossorigin="anonymous"
@@ -12,10 +19,10 @@
   </head>
   <body>
     <header id="header">
+      <img src="../images/circle.svg" alt="circle-logo" />
       <nav class="nav">
-        <img src="../images/circle.svg" alt="circle-logo" />
         <i class="fa-solid fa-bars"></i>
-        <ul>
+        <ul class="hidden">
           <li><a href="./home.html">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#services">Services</a></li>
@@ -27,13 +34,15 @@
       <section id="hero">
         <div>
           <article class="hero-text">
-            <h1>Empower your bussiness with stunning design</h1>
+            <h1>Empower your bussiness with stunning design !</h1>
             <p>
               Circle is a digital design and development studio. We design and
               develop astonishing websites and mobile apps.
             </p>
             <div class="hero-buttons">
-              <a href="./contact.html" taget="_blank">Get in touch</a>
+              <a class="blue-btn" <href="./contact.html" taget="_blank"
+                >Get in touch</a
+              >
               <a href="#projects">See our work</a>
             </div>
           </article>
@@ -42,21 +51,21 @@
       <section id="projects">
         <div class="projects-container">
           <h2>Recent Projects</h2>
-          <div>
-            <article>
-              <img src="../images/1.jpg" style="width: 150px" />
+          <div class="box">
+            <article class="single-project">
+              <img src="../images/1.jpg" alt="project-picture" />
               <h4>Simplify</h4>
               <p>UI Design & App Development</p>
               <a href="_blank">Learn more</a>
             </article>
-            <article>
-              <img src="../images/2.jpg" style="width: 150px" />
+            <article class="single-project">
+              <img src="../images/2.jpg" alt="project-picture" />
               <h4>Dashcoin</h4>
               <p>Web Development</p>
               <a href="_blank">Learn more</a>
             </article>
-            <article>
-              <img src="../images/3.jpg" style="width: 150px" />
+            <article class="single-project">
+              <img src="../images/3.jpg" alt="project-picture" />
               <h4>Vectorify</h4>
               <p>User Experience Design</p>
               <a href="_blank">Learn more</a>
@@ -65,45 +74,27 @@
         </div>
       </section>
       <section id="testimonials">
+        <div class="testimonials-icons-1">
+          <img class="emoji-1" src="../images/memoji-1.png" alt="memoji-1" />
+          <img class="emoji-2" src="../images/memoji-2.png" alt="memoji-1" />
+        </div>
         <div class="testimonials-text">
           <h2>Hear What Our Clients Have to Say</h2>
           <p>
-            “Circle helped us through every stage of our startup. We really
-            enjoyed working with you.”
+            “Circle helped us through every stage of our startup.<br />
+            We really enjoyed working with you.”
           </p>
           <div class="testimonials-client">
-            <img
-              src="../images/profile.png"
-              alt="Kristin Watson photo"
-              style="width: 50px"
-            />
+            <img src="../images/profile.png" alt="Kristin Watson photo" />
             <div class="testimonials-phrase">
-              <p class="name">Kristin Watson</p>
-              <p>Booking.com</p>
+              <p>Kristin Watson</p>
+              <span>Booking.com</span>
             </div>
           </div>
-        </div>
-        <div class="testimonials-icons">
-          <img
-            src="../images/memoji-1.png"
-            alt="memoji-1"
-            style="width: 50px"
-          />
-          <img
-            src="../images/memoji-2.png"
-            alt="memoji-1"
-            style="width: 50px"
-          />
-          <img
-            src="../images/memoji-3.png"
-            alt="memoji-1"
-            style="width: 50px"
-          />
-          <img
-            src="../images/memoji-4.png"
-            alt="memoji-1"
-            style="width: 50px"
-          />
+          <div class="testimonials-icons-2">
+            <img class="emoji-3" src="../images/memoji-3.png" alt="memoji-1" />
+            <img class="emoji-4" src="../images/memoji-4.png" alt="memoji-1" />
+          </div>
         </div>
       </section>
       <section id="services">
@@ -140,10 +131,13 @@
       </section>
       <section id="cta">
         <h2>Do you have any questions?</h2>
-        <p>Let us know!</p>
+        <p>Let us help you!</p>
         <form>
-          <input type="text" placeholder="Enter your email" />
-          <button>Suscribe!</button>
+          <div class="envelope">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="text" placeholder="Enter your email" />
+          </div>
+          <button>Suscribe</button>
         </form>
       </section>
     </main>
@@ -151,7 +145,7 @@
       <div class="footer-container">
         <div class="content">
           <img src="../images/circle.svg" />
-          <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+          <p>2972 Westheimer Rd. Santa Ana, <br />Illinois 85486</p>
         </div>
         <div class="links">
           <a href="#">Team</a>
