@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/contact.css" />
     <script
       src="https://kit.fontawesome.com/f11f09e05e.js"
       crossorigin="anonymous"
@@ -12,10 +13,10 @@
   </head>
   <body>
     <header id="header">
+      <img src="../images/circle.svg" alt="circle-logo" />
       <nav class="nav">
-        <img src="../images/circle.svg" alt="circle-logo" />
         <i class="fa-solid fa-bars"></i>
-        <ul>
+        <ul class="hidden">
           <li><a href="./home.html">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#services">Services</a></li>
@@ -26,7 +27,7 @@
     <main id="contact">
       <h1>Contact us</h1>
       <form>
-        <label for="name">Full name *</label>
+        <label class="label" for="name">Full name *</label>
         <input
           id="name"
           name="name"
@@ -34,8 +35,8 @@
           placeholder="Enter your full name"
           required
         />
-        <div>
-          <label for="name">Email</label>
+        <div class="row-inputs-container">
+          <label class="label" for="name">Email</label>
           <input
             id="email"
             name="email"
@@ -43,7 +44,7 @@
             placeholder="Enter your email"
             required
           />
-          <label for="phone">Phone</label>
+          <label class="label" for="phone">Phone</label>
           <input
             id="phone"
             name="phone"
@@ -52,7 +53,7 @@
             required
           />
         </div>
-        <label for="message">Message</label>
+        <label class="label" for="message">Message</label>
         <textarea
           id="message"
           name="message"
@@ -61,11 +62,11 @@
         <button>Submit</button>
       </form>
     </main>
-    <footer>
+    <footer id="footer">
       <div class="footer-container">
         <div class="content">
           <img src="../images/circle.svg" />
-          <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+          <p>2972 Westheimer Rd. Santa Ana, <br />Illinois 85486</p>
         </div>
         <div class="links">
           <a href="#">Team</a>
