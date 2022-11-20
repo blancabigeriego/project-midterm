@@ -6,6 +6,8 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
+/*navbar*/
+
 #header{
     position: fixed;
     top:0;
@@ -19,15 +21,59 @@ html{
 }
 .nav{
     display: flex;
-    font-size: 1.55em;
+    font-size: 1.55rem;
     cursor:pointer;
+    color: #292E47;
    
 }
 .hidden{
     display:none;
 }
 
+
+/*hero*/
 #hero{
     position:relative;
-    top: 70px;
+    top: 65px;
 }
+#hero div{
+    margin: 20px 30px;
+}
+.hero-text h1{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: #292E47;
+    text-align: center;
+    font-weight: 600;
+}
+
+.hero-text p{
+    font-size: 0.65rem;
+    text-align: center;
+    font-weight: 400;
+}
+.hero-buttons{
+    display: flex;
+    gap: 11px;
+}
+.hero-buttons a{
+    font-size: 0.65rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    width: 100px;
+    padding: 3px 3px;
+}
+.blue-btn{
+    background-color: #072AC8;
+   
+    color: #F2F4FC
+}
+
+/*projects*/
+#projects{
+    position: relative;
+    top: 80px;
+    color: #6B708D
+}
+
