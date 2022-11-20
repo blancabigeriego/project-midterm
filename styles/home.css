@@ -129,4 +129,71 @@ html{
 #testimonials{
     position: relative;
     top: 100px;
+    background-color: #292E47;
+    background-image: url("../images/orbit.png");
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+    margin: 0 1rem;
+}
+.testimonials-icons-1{
+    
+    padding: 1.25rem 0.5rem 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+.testimonials-icons-1 img, .testimonials-icons-2 img{
+    width:3.125rem;
+    
+}
+.testimonials-icons-2{
+    
+    padding: 0 0.5rem 1.25rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.testimonials-text h2{
+    color:#F2F4FC;
+    text-align: center;
+}
+.testimonials-text p{
+    font-size: 0.55rem;
+    color: #FFC600;
+    text-align: center;
+    margin: 1.875rem;
+}
+.testimonials-client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.testimonials-client img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.testimonials-phrase{
+    line-height: 0.4rem;
+}
+.testimonials-phrase p{
+    margin: 0px;
+    color: #A2D6F9;
+}
+
+.testimonials-phrase span{
+    margin: 0px;
+    color: #F2F4FC;
+    font-size: 0.5rem;
+}
+
+/*services*/
+
+#services{
+    position:relative;
+    top: 80px;
+    
 }
