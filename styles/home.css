@@ -74,6 +74,59 @@ html{
 #projects{
     position: relative;
     top: 80px;
-    color: #6B708D
+    
 }
 
+.projects-container{
+    margin: 20px 30px;
+}
+.projects-container h2{
+    text-align: center;
+    color: #292E47;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.single-project{
+    height: 30%;
+    width: 74%;
+    margin: 0px;
+    background-color: white;
+    align-self: center;
+}
+.single-project > img{
+    width: 100%;
+    margin: 0px;
+}
+.single-project > h4{
+    margin: 0px;
+    padding: 5px 0px 10px 10px;
+    color:#292E47;
+    
+    
+}
+.single-project p{
+    margin-top: 0px;
+    padding: 0px 0px 10px 10px;
+    font-size: 0.5rem;
+    color: #292E47;
+    font-weight: 400;
+}
+.single-project a{
+    margin-top: 30px;
+    padding: 10px 0px 10px 10px;
+    text-decoration: none;
+    color: #072AC8;
+    font-size: 0.5em;
+    margin-top: 1em;
+}
+
+/*testimonials*/
+
+#testimonials{
+    position: relative;
+    top: 100px;
+}
