@@ -250,5 +250,45 @@ html{
 /*cta*/
 #cta{
     position: relative;
-    top: 100px;
+    top: 12.5rem;
+    margin: 0 1rem;
+    background-color: #FFC600;
+    height: 40vh;
+}
+
+#cta h2, #cta p{
+    color:#292E47;
+    padding: 10px 20px;
+    text-align: center;
+}
+#cta form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+#cta form input{
+    font-size: 0.5rem;
+    width: 40%;
+    padding: 0.3rem;
+        border: none;
+}
+#cta form button{
+    font-size: 0.5rem;
+    width: 40%;
+    padding: 0.3rem;
+    border: none;
+    background-color:  #072AC8;
+    color: #F2F4FC;
+
+}
+
+
+
+/*footer*/
+#footer{
+    position: relative;
+    top: 300px;
 }
