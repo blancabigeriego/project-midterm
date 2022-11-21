@@ -368,23 +368,32 @@ html{
    .imgs-div{
     display: flex;
     width: 50%;
+    top: 0;
+    right: 0rem;
+    position: relative;
+   }
+   .imgs-container{
+    top: 0;
+    right: 0rem;
+    position: relative;
    }
    .card-1{
     position: absolute;
     width: 8rem;
-    right: 7rem;
-    bottom: 9rem;
+    right: -5.5rem;
+    top: -1rem;
     z-index: 1;
    }
    .card-2{
     position: absolute;
-    width: 8rem;
-    left: 27rem;
-    bottom: 4rem;
+    width: 7rem;
+    right: -14rem;
+    top: 10rem;
     z-index: 1;
    }
    .client{
     position: absolute;
     width: 13rem;
+    right: -12rem;
    }
 }
