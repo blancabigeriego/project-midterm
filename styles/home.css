@@ -56,6 +56,8 @@ html{
     font-size: 0.65rem;
     text-align: center;
     font-weight: 400;
+    color:#6B708D;
+    margin: 0rem 3rem 1rem 0;
 }
 .hero-buttons{
     display: flex;
@@ -498,7 +500,8 @@ html{
     /*hero*/
     #hero{
         top: 95px;
-        margin: 3rem 4rem;
+        margin: 3rem 8rem;
+        
     }
     .hero-text{
         width: 55%;
@@ -506,10 +509,12 @@ html{
     .hero-text h1{
         text-align: left;
         font-size: 60px;
+        margin-bottom: 1.2rem;
     }
     .hero-text p{
         text-align: left;
         font-size: 17px;
+        margin-bottom: 1.2rem;
     }
     .hero-buttons{
         justify-content: left;
@@ -556,11 +561,21 @@ html{
 
     /*clients*/
     #clients{
-        top: 190px;
+        top: 260px;
+       
+    }
+
+    #clients div{
+        margin: 0 1rem;
+        
+    }
+    #clients div img{
+        width: 5rem;
+         filter: grayscale(1);
     }
     /*projects*/
     #projects{
-        top: 220px;
+        top: 340px;
     }
 
 }
