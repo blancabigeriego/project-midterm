@@ -13,9 +13,10 @@ html{
     top:0;
     left: 0;
     width: 100%;
-    height: 8%;
+    height: 10%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #F2F4FC;
     z-index: 2;
 }
@@ -38,7 +39,7 @@ html{
 /*hero*/
 #hero{
     position:relative;
-    top: 65px;
+    top: 75px;
 }
 #hero div{
     margin: 20px 30px;
@@ -58,6 +59,8 @@ html{
 }
 .hero-buttons{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 11px;
 }
 .hero-buttons a{
@@ -73,11 +76,14 @@ html{
    
     color: #F2F4FC
 }
+.imgs-div{
+    display:none;
+}
 
 /*clients*/
 #clients{
     position:relative;
-    top: 80px;
+    top: 90px;
 
 }
 #clients div{
@@ -91,7 +97,7 @@ html{
 /*projects*/
 #projects{
     position: relative;
-    top: 90px;
+    top: 100px;
     
 }
 
@@ -147,7 +153,7 @@ html{
 
 #testimonials{
     position: relative;
-    top: 110px;
+    top: 120px;
     background-color: #292E47;
     background-image: url("../images/orbit.png");
     background-position: 0 0;
@@ -213,7 +219,7 @@ html{
 
 #services{
     position:relative;
-    top: 120px;
+    top: 130px;
     
 }
 
@@ -339,11 +345,111 @@ html{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: .rem;
+    grid-gap: 0.2rem;
     
 }
 .links a{
     color:#6B708D;
     font-size: 0.4rem;
     text-decoration: none;
+}
+
+
+/*media-queries tablet: from 421 to 899px*/
+
+@media screen and (min-width: 421px){
+
+    /*hero*/
+    #hero div{
+        display: flex;
+    }
+    .hero-text{
+        width: 50%;
+    }
+   .imgs-div{
+    display: flex;
+    width: 50%;
+    top: 0;
+    right: 0rem;
+    position: relative;
+   }
+   .imgs-container{
+    top: 0;
+    right: 0rem;
+    position: relative;
+   }
+   .card-1{
+    position: absolute;
+    width: 8rem;
+    right: -5.5rem;
+    top: -1rem;
+    z-index: 1;
+   }
+   .card-2{
+    position: absolute;
+    width: 7rem;
+    right: -14rem;
+    top: 10rem;
+    z-index: 1;
+   }
+   .client{
+    position: absolute;
+    width: 13rem;
+    right: -12rem;
+   }
+
+   /*clients*/
+
+   #clients{
+    top: 110px;
+   }
+
+   /*projects*/
+
+   #projects{
+    top: 140px;
+   }
+   .box{
+    margin-top: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+   }
+   .single-project{
+    width: 40%;
+    margin: 0 auto;
+   }
+   .down{
+    margin: 0 auto;
+   }
+  
+
+
+
+   /*testimonials*/
+   #testimonials{
+    top: 180px;
+   }
+
+   /*services*/
+   #services{
+    top: 230px;
+   }
+   .services-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+   .services-container article{
+    width: 40%;
+   }
+
+   /*cta*/
+   #cta{
+    top:300px;
+   }
+   
+   /*footer*/
+   #footer{
+    top:350px;
+   }
 }
