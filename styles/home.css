@@ -41,7 +41,7 @@ html{
     position:relative;
     top: 75px;
 }
-#hero div{
+.hero-container{
     margin: 20px 30px;
 }
 .hero-text h1{
@@ -455,6 +455,8 @@ html{
 }
 
 @media all and (min-width: 900px){
+
+    /*header*/
     #header{
         justify-content: space-between;
         height: 13%;
@@ -469,7 +471,7 @@ html{
     .hidden{
         display: flex;
         gap: 3rem;
-        font-size: 17px;
+        font-size: 1.063rem;
         font-weight: 500;
         
     }
@@ -490,6 +492,75 @@ html{
         text-decoration: none;
         margin-right: 5rem;
         padding: 0.7rem 1.2rem;
+    }
+
+
+    /*hero*/
+    #hero{
+        top: 95px;
+        margin: 3rem 4rem;
+    }
+    .hero-text{
+        width: 55%;
+    }
+    .hero-text h1{
+        text-align: left;
+        font-size: 60px;
+    }
+    .hero-text p{
+        text-align: left;
+        font-size: 17px;
+    }
+    .hero-buttons{
+        justify-content: left;
+    }
+    .hero-buttons >a{
+        
+        font-size: 17px;
+        padding: 1rem 1.2rem;
+    }
+
+    .imgs-div{
+        width: 45%;
+        
+    }
+
+    .imgs-container{
+        top: 0;
+        right: 0rem;
+        position: relative;
+       }
+       .card-1{
+        position: absolute;
+        width: 17rem;
+        right: -15rem;
+        top: 0rem;
+        z-index: 1;
+       }
+       .card-2{
+        position: absolute;
+        width: 16rem;
+        right: -30rem;
+        top: 24rem;
+        z-index: 1;
+       }
+       .client{
+        position: absolute;
+        width: 27.5rem;
+        right: -28rem;
+        top: 0rem;
+       }
+
+    
+
+
+    /*clients*/
+    #clients{
+        top: 190px;
+    }
+    /*projects*/
+    #projects{
+        top: 220px;
     }
 
 }
