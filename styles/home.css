@@ -486,7 +486,7 @@ html{
         width: 4rem;
         padding-left: 5rem;
     }
-    .fa-solid ,fa-bars{
+    .fa-solid ,.fa-bars{
         display: none;
     }
     .hidden{
