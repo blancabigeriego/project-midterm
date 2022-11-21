@@ -435,11 +435,6 @@ html{
    #services{
     top: 230px;
    }
-
-   /*cta*/
-   #cta{
-    top:300px;
-   }
    .services-container{
     flex-direction: row;
     flex-wrap: wrap;
@@ -447,5 +442,14 @@ html{
    .services-container article{
     width: 40%;
    }
+
+   /*cta*/
+   #cta{
+    top:300px;
+   }
    
+   /*footer*/
+   #footer{
+    top:350px;
+   }
 }
