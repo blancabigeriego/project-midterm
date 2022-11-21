@@ -409,14 +409,6 @@ html{
    #projects{
     top: 140px;
    }
-  
-
-
-
-   /*testimonials*/
-   #testimonials{
-    top: 180px;
-   }
    .box{
     margin-top: 2rem;
     flex-direction: row;
@@ -430,4 +422,30 @@ html{
    .down{
     margin: 0 auto;
    }
+  
+
+
+
+   /*testimonials*/
+   #testimonials{
+    top: 180px;
+   }
+
+   /*services*/
+   #services{
+    top: 230px;
+   }
+
+   /*cta*/
+   #cta{
+    top:300px;
+   }
+   .services-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+   .services-container article{
+    width: 40%;
+   }
+   
 }
