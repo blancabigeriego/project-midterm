@@ -359,6 +359,7 @@ html{
 
 @media screen and (min-width: 421px){
 
+    /*hero*/
     #hero div{
         display: flex;
     }
@@ -395,5 +396,38 @@ html{
     position: absolute;
     width: 13rem;
     right: -12rem;
+   }
+
+   /*clients*/
+
+   #clients{
+    top: 110px;
+   }
+
+   /*projects*/
+
+   #projects{
+    top: 140px;
+   }
+  
+
+
+
+   /*testimonials*/
+   #testimonials{
+    top: 180px;
+   }
+   .box{
+    margin-top: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+   }
+   .single-project{
+    width: 40%;
+    margin: 0 auto;
+   }
+   .down{
+    margin: 0 auto;
    }
 }
