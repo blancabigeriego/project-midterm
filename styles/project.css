@@ -336,5 +336,58 @@ html{
     /*projects*/
 
     #projects{
+        top: 250px;
+    }
+
+    #projects h2{
+        font-size: 1.875rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .box{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .single-project{
+        width: 21.25rem;
+    }
+
+    .single-project img{
+        width: 21.25rem;
+    }
+
+    .single-project h4{
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-left: 1rem;
+       
+    }
+    .single-project p{
+        font-size: 1.063rem;
+        font-weight: 400;
+        
+    }
+
+    .single-project a{
+        font-size: 1.063rem;
+        font-weight: 400;
+       
+        
+    }
+    .text{
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /*cta*/
+
+    #cta{
         top: 1000px;
     }
