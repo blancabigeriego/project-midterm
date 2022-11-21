@@ -74,10 +74,24 @@ html{
     color: #F2F4FC
 }
 
+/*clients*/
+#clients{
+    position:relative;
+    top: 80px;
+
+}
+#clients div{
+    display: flex;
+    justify-content: space-around;
+}
+.clients-logo{
+    width: 2rem;
+}
+
 /*projects*/
 #projects{
     position: relative;
-    top: 80px;
+    top: 90px;
     
 }
 
@@ -133,7 +147,7 @@ html{
 
 #testimonials{
     position: relative;
-    top: 100px;
+    top: 110px;
     background-color: #292E47;
     background-image: url("../images/orbit.png");
     background-position: 0 0;
@@ -199,7 +213,7 @@ html{
 
 #services{
     position:relative;
-    top: 110px;
+    top: 120px;
     
 }
 
