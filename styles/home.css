@@ -21,7 +21,7 @@ html{
 }
 #header img{
     width: 3rem;
-    padding: 1rem;
+    padding-left:1rem;
 }
 .nav{
     display: flex;
@@ -74,10 +74,24 @@ html{
     color: #F2F4FC
 }
 
+/*clients*/
+#clients{
+    position:relative;
+    top: 80px;
+
+}
+#clients div{
+    display: flex;
+    justify-content: space-around;
+}
+.clients-logo{
+    width: 2rem;
+}
+
 /*projects*/
 #projects{
     position: relative;
-    top: 80px;
+    top: 90px;
     
 }
 
@@ -133,7 +147,7 @@ html{
 
 #testimonials{
     position: relative;
-    top: 100px;
+    top: 110px;
     background-color: #292E47;
     background-image: url("../images/orbit.png");
     background-position: 0 0;
@@ -199,7 +213,7 @@ html{
 
 #services{
     position:relative;
-    top: 110px;
+    top: 120px;
     
 }
 
@@ -318,18 +332,18 @@ html{
 }
 .content p{
     color:#6B708D;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
 }
 
 .links{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-gap: .rem;
     
 }
 .links a{
     color:#6B708D;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
     text-decoration: none;
 }
