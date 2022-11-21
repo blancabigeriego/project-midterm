@@ -125,9 +125,52 @@ html{
 
 /*mediaqueries*/
 
-@media all and (min-width: 420px){
+@media all and (min-width: 421px), all and (max-width: 899px){
     #contact form{
         margin: 0 2rem;
     }
+}
+
+@media all and (min-width: 900px){
+    #contact{
+        margin: 0 3rem;
+    }
+    #header{
+        justify-content: space-between;
+        height: 13%;
+    }
+    #header img{
+        width: 4rem;
+        padding-left: 5rem;
+    }
+    .fa-bars{
+        display: none;
+    }
+    .hidden{
+        display: flex;
+        gap: 3rem;
+        font-size: 1.063rem;
+        font-weight: 500;
+        
+    }
+    .hidden >li{
+        list-style: none;
+        
+    }
+    .hidden li a{
+        text-decoration: none;
+    }
+    .blue{
+        color: #072AC8;
+    }
+  
+    .btn{
+        background-color: #072AC8;
+        color: #F2F4FC;
+        text-decoration: none;
+        margin-right: 5rem;
+        padding: 0.7rem 1.2rem;
+    }
+
 }
 
