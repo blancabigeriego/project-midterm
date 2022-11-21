@@ -705,15 +705,56 @@ html{
         padding: 0;
         
     }
-
-
-
-
-
+    
     /*cta*/
+    
+    
+    
+   
     #cta{
         top: 900px;
     }
+
+    #cta h2{
+        padding-top: 5rem;
+        padding-bottom: 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    #cta p{
+        font-size: 1.25rem;
+        padding-top: 0;
+    }
+    #cta form{
+        padding-top: 1rem;
+        flex-direction: row;
+        padding-bottom: 8rem;
+        
+        gap: 0.625rem;
+    }
+
+   #cta form input{
+    font-size: 1.063rem;
+    
+}
+
+    #cta form button{
+        margin: 0;
+        font-size: 1.063rem;
+    }
+
+    
+    .envelope i{
+       
+        top: 30px;
+        z-index: 1;
+        margin-left: 12px;
+       
+    }
+    .fa-envelope{
+        width: 1.5rem;
+    }
+    
 
     /*footer*/
     #footer{
