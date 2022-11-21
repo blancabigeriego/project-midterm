@@ -21,7 +21,7 @@ html{
 }
 #header img{
     width: 3rem;
-    padding: 1rem;
+    padding-left:1rem;
 }
 .nav{
     display: flex;
@@ -318,18 +318,18 @@ html{
 }
 .content p{
     color:#6B708D;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
 }
 
 .links{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-gap: .rem;
     
 }
 .links a{
     color:#6B708D;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
     text-decoration: none;
 }
