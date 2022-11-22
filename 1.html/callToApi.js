@@ -18,7 +18,7 @@ const projectsBoxProjectPage = document.querySelector('.box-1');
 function getData(){
     fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
     .then((response) => response.json())
-    .then((data) => sortData(data));
+    .then((data) => sortData(data.reverse()));
 
 
         
@@ -28,8 +28,20 @@ function getData(){
 //FUNCTIONS
 
 function renderProjectsProjectPage(projects){
+    console.log(projects)
     let only3 = projects.slice(1,4);
-    projectsBox.innerHTML =` `
+    for(let i=0; i< only3.length; i++){
+        let html=`<article class="single-project">
+        <img src="${only3[i].image}" alt="${only3[i].name} picture" />
+        <div class="text">
+        <h4>${only3[i].name}</h4>
+        <p>${only3[i].description}</p>
+        <a href="_blank">Learn More</a>
+        </div>
+        </article>`
+        projectsBoxProjectPage.innerHTML += html;
+    }
+
 
 }
 
