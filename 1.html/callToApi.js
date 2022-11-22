@@ -4,6 +4,7 @@
 //From Home Page
 const projectsBox = document.querySelector('.box');
 
+
 //From Projects Page
 const mainProjectSection = document.querySelector('#project');
 const projectsBoxProjectPage = document.querySelector('.box-1');
@@ -27,6 +28,9 @@ function getData(){
 
 //FUNCTIONS
 
+
+//This function renders the other projects on Project Page
+
 function renderProjectsProjectPage(projects){
     console.log(projects)
     let only3 = projects.slice(1,4);
@@ -36,7 +40,7 @@ function renderProjectsProjectPage(projects){
         <div class="text">
         <h4>${only3[i].name}</h4>
         <p>${only3[i].description}</p>
-        <a href="_blank">Learn More</a>
+        <a href="">Learn More</a>
         </div>
         </article>`
         projectsBoxProjectPage.innerHTML += html;
@@ -45,12 +49,14 @@ function renderProjectsProjectPage(projects){
 
 }
 
-//This function renders the first project in the Projects page
+//This function renders the first project on the Projects page
 
 function renderMainProject(projects){
-   const mainProject = projects.filter( project=> project.uuid === '1');
+
+    if(!localStorage.getItem('id') || localStorage.getItem('id')=== '1' ){
+    let mainProject = projects.filter( project=> project.uuid === '1');
    
-   mainProjectSection.innerHTML = `<h1>${mainProject[0].name}</h1>
+    mainProjectSection.innerHTML = `<h1>${mainProject[0].name}</h1>
     <div class='details'>
     <h2>${mainProject[0].description}</h2>
     <p><strong class="colour">Completed on</strong>${mainProject[0].completed_on}</p>
@@ -59,8 +65,50 @@ function renderMainProject(projects){
     <img src="${mainProject[0].image}" alt="${mainProject[0].name} picture" />
     <p>${mainProject[0].content}</p>
     </div>`
+    
+    }
+  
+    if(localStorage.getItem('id')=== '2'){
+    let mainProject = projects.filter( project=> project.uuid === '2');
+
+    mainProjectSection.innerHTML = `<h1>${mainProject[0].name}</h1>
+    <div class='details'>
+    <h2>${mainProject[0].description}</h2>
+    <p><strong class="colour">Completed on</strong>${mainProject[0].completed_on}</p>
+    </div>
+    <div class="project-container">
+    <img src="${mainProject[0].image}" alt="${mainProject[0].name} picture" />
+    <p>${mainProject[0].content}</p>
+    </div>`
+    
+    }
+    if(localStorage.getItem('id')=== '3'){
+        let mainProject = projects.filter( project=> project.uuid === '3');
+        console.log(mainProject)
+    
+        mainProjectSection.innerHTML = `<h1>${mainProject[0].name}</h1>
+        <div class='details'>
+        <h2>${mainProject[0].description}</h2>
+        <p><strong class="colour">Completed on</strong>${mainProject[0].completed_on}</p>
+        </div>
+        <div class="project-container">
+        <img src="${mainProject[0].image}" alt="${mainProject[0].name} picture" />
+        <p>${mainProject[0].content}</p>
+        </div>`
+        
+        }
+
+
+    
+    }
+    
    
-};
+
+
+function saveId(id){
+    localStorage.setItem('id', id);
+    
+}
 
 //This function renders the projects in the Home Page
 
@@ -72,7 +120,7 @@ function renderProjectsHomePage(arr){
         let html = `<img src='${only3[i].image}' alt='${only3[i].name} picture'/>
         <h4>${only3[i].name}</h4>
         <p>${only3[i].description}</p>
-        <a href='../html/projects.html'>Learn More</a> `;
+        <a onclick="saveId(${only3[i].uuid})" href='../html/project.html' id='${only3[i].uuid}'>Learn More</a> `;
         eachProjectHomePage.innerHTML = html;
         projectsBox.appendChild(eachProjectHomePage);
     }
@@ -81,10 +129,7 @@ function renderProjectsHomePage(arr){
 
 
 //This calls every render function and passes the data that was fetched from API
-function renderHTML(projects){
-    
-  
-};
+
 
 function sortData(projects){
     if(window.location.href.includes('project')){
@@ -94,6 +139,7 @@ function sortData(projects){
     }
     if(window.location.href.includes('home')){
         renderProjectsHomePage(projects);
+        
     }
 }
 
