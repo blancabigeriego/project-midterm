@@ -4,6 +4,12 @@
 
 const burgerMenu = document.querySelector('.fa-bars');
 const navBar = document.querySelector('.nav');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const phoneInput = document.getElementById('phone');
+const textArea = document.getElementById('message');
+const form = document.querySelector('form');
+const btn = document.querySelector('.submit');
 
 //CREATE ELEMENTS IN THE DOM
 
@@ -14,8 +20,10 @@ menuList.innerHTML = `<li class='menuElement'><a href='#hero' onclick="displayMe
 navBar.appendChild(menuList);
 
 
+
 //FUNCTIONS
 
+//This function toggles the menu
 function displayMenu(){
     
     console.log('click')
@@ -23,6 +31,19 @@ function displayMenu(){
 
 }
 
+
+
+function validateForm(ev){
+    ev.preventDefault();
+    if(nameInput.Value === "" || emailInput.value ==="" || phoneInput.value === "" || message.value === ""){
+        let message = document.createElement('p');
+        message.innerHTML = "**You must fill all the fields!!";
+        form.appendChild(message);
+
+    }
+}
+
 //EVENT LISTENERS
 
 burgerMenu.addEventListener('click', displayMenu);
+btn.addEventListener('click', validateForm)
