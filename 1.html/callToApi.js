@@ -142,7 +142,7 @@ function renderMainProject(projects){
     
    
 
-
+//This function saves the ID of the project when you clicked on Learn more to display it on project page
 function saveId(id){
     localStorage.setItem('id', id);
     
@@ -151,14 +151,22 @@ function saveId(id){
 //This function renders the projects in the Home Page
 
 function renderProjectsHomePage(arr){
-    let only3 = arr.slice(0,3);
-    for(let i= 0; i< only3.length; i++){
+    let sorted= arr.sort((a,b)=>{
+        let da = new Date(a.completed_on),
+            db = new Date(b.completed_on);
+            return da - db;
+
+    })
+
+    
+    //let only3 = arr.slice(0,3);
+    for(let i= 3; i > -1; i--){
         const eachProjectHomePage = document.createElement('article');
         eachProjectHomePage.classList.add('single-project');
-        let html = `<img src='${only3[i].image}' alt='${only3[i].name} picture'/>
-        <h4>${only3[i].name}</h4>
-        <p>${only3[i].description}</p>
-        <a onclick="saveId(${only3[i].uuid})" href='../html/project.html' id='${only3[i].uuid}'>Learn More</a> `;
+        let html = `<img src='${sorted[i].image}' alt='${sorted[i].name} picture'/>
+        <h4>${sorted[i].name}</h4>
+        <p>${sorted[i].description}</p>
+        <a onclick="saveId(${sorted[i].uuid})" href='../html/project.html' id='${sorted[i].uuid}'>Learn More</a> `;
         eachProjectHomePage.innerHTML = html;
         projectsBox.appendChild(eachProjectHomePage);
     }
