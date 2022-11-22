@@ -31,10 +31,11 @@ function getData(){
 
 //This function renders the other projects on Project Page
 
-function renderProjectsProjectPage(projects){
-    console.log(projects)
-    let only3 = projects.slice(1,4);
-    for(let i=0; i< only3.length; i++){
+function renderProjectsProjectPage(projects, id){
+    
+    if(!id || id === '1'){
+        let only3 = projects.slice(1,4);
+        for(let i=0; i< only3.length; i++){
         let html=`<article class="single-project">
         <img src="${only3[i].image}" alt="${only3[i].name} picture" />
         <div class="text">
@@ -44,16 +45,51 @@ function renderProjectsProjectPage(projects){
         </div>
         </article>`
         projectsBoxProjectPage.innerHTML += html;
+        }
     }
+    if(id === '2'){
+        let only3 = projects.splice(1,1);
+        
+        for(let i=0; i< projects.length; i++){
+            let html=`<article class="single-project">
+            <img src="${projects[i].image}" alt="${projects[i].name} picture" />
+            <div class="text">
+            <h4>${projects[i].name}</h4>
+            <p>${projects[i].description}</p>
+            <a href="">Learn More</a>
+            </div>
+            </article>`
+            projectsBoxProjectPage.innerHTML += html;
+        }
+    }
+
+    if(id ==='3'){
+        let only3 = projects.splice(2,1);
+        for(let i=0; i< projects.length; i++){
+            let html=`<article class="single-project">
+            <img src="${projects[i].image}" alt="${projects[i].name} picture" />
+            <div class="text">
+            <h4>${projects[i].name}</h4>
+            <p>${projects[i].description}</p>
+            <a href="">Learn More</a>
+            </div>
+            </article>`
+            projectsBoxProjectPage.innerHTML += html;
+        }
+    }
+    
+    
 
 
 }
 
-//This function renders the first project on the Projects page
+//This function renders the first project or the clicked project on the Projects page
 
 function renderMainProject(projects){
 
-    if(!localStorage.getItem('id') || localStorage.getItem('id')=== '1' ){
+    let savedId = localStorage.getItem('id');
+
+    if(!savedId || savedId=== '1' ){
     let mainProject = projects.filter( project=> project.uuid === '1');
    
     mainProjectSection.innerHTML = `<h1>${mainProject[0].name}</h1>
@@ -68,7 +104,7 @@ function renderMainProject(projects){
     
     }
   
-    if(localStorage.getItem('id')=== '2'){
+    if(savedId=== '2'){
     let mainProject = projects.filter( project=> project.uuid === '2');
 
     mainProjectSection.innerHTML = `<h1>${mainProject[0].name}</h1>
@@ -82,7 +118,7 @@ function renderMainProject(projects){
     </div>`
     
     }
-    if(localStorage.getItem('id')=== '3'){
+    if(savedId=== '3'){
         let mainProject = projects.filter( project=> project.uuid === '3');
         console.log(mainProject)
     
@@ -97,6 +133,8 @@ function renderMainProject(projects){
         </div>`
         
         }
+        
+        renderProjectsProjectPage(projects, savedId);
 
 
     
@@ -135,7 +173,7 @@ function sortData(projects){
     if(window.location.href.includes('project')){
    
         renderMainProject(projects);
-        renderProjectsProjectPage(projects);
+        
     }
     if(window.location.href.includes('home')){
         renderProjectsHomePage(projects);
