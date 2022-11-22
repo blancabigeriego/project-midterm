@@ -27,6 +27,12 @@ function getData(){
 
 //FUNCTIONS
 
+function renderProjectsProjectPage(projects){
+    let only3 = projects.slice(1,4)
+}
+
+//This function renders the first project in the Projects page
+
 function renderMainProject(projects){
    const mainProject = projects.filter( project=> project.uuid === '1');
    
@@ -41,6 +47,8 @@ function renderMainProject(projects){
     </div>`
    
 };
+
+//This function renders the projects in the Home Page
 
 function renderProjectsHomePage(arr){
     let only3 = arr.slice(0,3);
@@ -57,11 +65,12 @@ function renderProjectsHomePage(arr){
 }
 
 
-//This function renders the projects in the Home Page
 
+//This calls every render function and passes the data that was fetched from API
 function renderHTML(projects){
     renderProjectsHomePage(projects);
     renderMainProject(projects);
+    renderProjectsProjectPage(projects);
 };
 
 
