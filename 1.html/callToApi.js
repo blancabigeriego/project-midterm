@@ -6,6 +6,7 @@ const projectsBox = document.querySelector('.box');
 
 //From Projects Page
 const mainProjectSection = document.querySelector('#project');
+const projectsBoxProjectPage = document.querySelector('.box-1');
 
 
 
@@ -17,10 +18,9 @@ const mainProjectSection = document.querySelector('#project');
 function getData(){
     fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
     .then((response) => response.json())
-    .then((data) => 
-        renderHTML(data.reverse()));
+    .then((data) => sortData(data));
 
-    
+
         
     
 }
@@ -28,7 +28,9 @@ function getData(){
 //FUNCTIONS
 
 function renderProjectsProjectPage(projects){
-    let only3 = projects.slice(1,4)
+    let only3 = projects.slice(1,4);
+    projectsBox.innerHTML =` `
+
 }
 
 //This function renders the first project in the Projects page
@@ -68,17 +70,29 @@ function renderProjectsHomePage(arr){
 
 //This calls every render function and passes the data that was fetched from API
 function renderHTML(projects){
-    renderProjectsHomePage(projects);
-    renderMainProject(projects);
-    renderProjectsProjectPage(projects);
+    
+  
 };
 
-
+function sortData(projects){
+    if(window.location.href.includes('project')){
+   
+        renderMainProject(projects);
+        renderProjectsProjectPage(projects);
+    }
+    if(window.location.href.includes('home')){
+        renderProjectsHomePage(projects);
+    }
+}
 
 
 
 
 //ON LOAD LISTENER
 window.onload = (event) =>{
+    
+    
     getData();
+    
+    
 }
