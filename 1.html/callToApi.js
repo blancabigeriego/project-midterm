@@ -12,39 +12,41 @@ const projectsBox = document.querySelector('.box');
 function getData(){
     fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
     .then((response) => response.json())
-    .then((data) => renderHTML(data));
+    .then((data) => renderHTML(data.reverse()));
     
 }
 
 //FUNCTIONS
 
 function renderHTML(projects){
-    
-    /*for (let project of projects){
-        
-       let html= `<img src='${project.image}' alt='${project.name} picture'/>
-       <h4>${project.name}</h4>
-       <p>${project.description}</p>
-       <a href='../html/projects.html'>Learn More</a>`
-       
-        eachProjectHomePage.innerHTML = html;
-        console.log(eachProjectHomePage)*/
-
-        console.log(projects)
-
-        projects.forEach(project => {
-            const eachProjectHomePage = document.createElement('article');
-            eachProjectHomePage.classList.add('single-project');
-            let html= `<img src='${project.image}' alt='${project.name} picture'/>
-            <h4>${project.name}</h4>
-            <p>${project.description}</p>
-            <a href='../html/projects.html'>Learn More</a>`
-            eachProjectHomePage.innerHTML = html;
+   /* projects.forEach(project => {
+    const eachProjectHomePage = document.createElement('article');
+    eachProjectHomePage.classList.add('single-project');
+    let html= `<img src='${project.image}' alt='${project.name} picture'/>
+    <h4>${project.name}</h4>
+    <p>${project.description}</p>
+     <a href='../html/projects.html'>Learn More</a>`
+    eachProjectHomePage.innerHTML = html;
             
-            projectsBox.appendChild(eachProjectHomePage);
-        });
-       
-       }
+    projectsBox.appendChild(eachProjectHomePage);
+    });*/
+
+    let only3 = projects.slice(0,3);
+    console.log(only3)
+    for(let i= 0; i< only3.length; i++){
+        const eachProjectHomePage = document.createElement('article');
+        eachProjectHomePage.classList.add('single-project');
+        let html = `<img src='${only3[i].image}' alt='${only3[i].name} picture'/>
+        <h4>${only3[i].name}</h4>
+        <p>${only3[i].description}</p>
+        <a href='../html/projects.html'>Learn More</a> `;
+        eachProjectHomePage.innerHTML = html;
+        projectsBox.appendChild(eachProjectHomePage);
+
+    }
+
+
+}
 
 
 
