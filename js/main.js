@@ -12,6 +12,7 @@ function refreshData(){
 //FROM ALL PAGES
 const burgerMenu = document.querySelector('.fa-bars');
 const navBar = document.querySelector('.nav');
+const randomLink = document.querySelector('.random-link');
 //FROM CONTACT PAGE
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
@@ -168,6 +169,7 @@ function validateForm(ev){
 //EVENT LISTENERS
 
 burgerMenu.addEventListener('click', displayMenu);
+randomLink.addEventListener('click', refreshData);
 
 //EVENT LISTENER ONLY FOR CONTACT PAGE
 if(window.location.href.includes('contact')){
