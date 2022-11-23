@@ -647,7 +647,20 @@ html{
        }
 
     
+    /*projects*/
 
+    .box{
+        gap: 110px;
+    }
+    .single-project h4{
+        font-size: 1.438rem;
+    }
+    .single-project p{
+        font-size: 1.063rem;
+    }
+    .single-project a{
+        font-size: 1.063rem;
+    }
 
     /*clients*/
     #clients{
@@ -661,7 +674,7 @@ html{
     }
     #clients div img{
         width: 5rem;
-         filter: grayscale(1);
+        filter: grayscale(1);
         
     }
     /*projects*/
@@ -695,6 +708,8 @@ html{
 
     #testimonials{
         top: 800px;
+        margin: 0 1.5rem;
+        
     }
 
     .testimonials-text h2{
@@ -741,7 +756,7 @@ html{
     }
 
     .services-container article{
-     height: 25rem;
+     height: 24rem;
      padding: 1rem;
      display: flex;
      flex-direction: column;
@@ -808,6 +823,12 @@ html{
     #cta form button{
         margin: 0;
         font-size: 1.063rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    #cta form button:hover{
+        font-size: 1.5rem;
+        font-weight: bold;
     }
 
     
