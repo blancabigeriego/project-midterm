@@ -159,7 +159,6 @@ function renderProjectsHomePage(arr){
     })
 
     
-    //let only3 = arr.slice(0,3);
     for(let i= 3; i > -1; i--){
         const eachProjectHomePage = document.createElement('article');
         eachProjectHomePage.classList.add('single-project');
