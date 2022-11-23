@@ -1,7 +1,7 @@
 //CALL TO API FOR RANDOM PROJECTS
 
 function refreshData(){
-    console.log('eyyyy')
+    
     fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
     .then((response) => response.json())
     .then((data) => getRandomProject(data.reverse()));
@@ -31,7 +31,7 @@ menuList.setAttribute('class', 'hidden');
 menuList.classList.add('navUl');
 
 
-menuList.innerHTML = `<li class='menuElement'><a href='#hero' onclick="displayMenu()">Home</a></li><li class='menuElement'><a href='#projects' onclick="displayMenu(), console.log('clicking'), refreshData()">Projects</a></li><li class='menuElement'><a href='#services' onclick="displayMenu()">Services</a></li><li class='menuElement'><a href='../html/contact.html'>Contact Us</a></li>`;
+menuList.innerHTML = `<li class='menuElement'><a href='#hero' onclick="displayMenu()">Home</a></li><li class='menuElement'><a href='#projects' onclick="displayMenu(), refreshData()">Projects</a></li><li class='menuElement'><a href='#services' onclick="displayMenu()">Services</a></li><li class='menuElement'><a href='../html/contact.html'>Contact Us</a></li>`;
 navBar.appendChild(menuList);
 
 
@@ -41,12 +41,83 @@ navBar.appendChild(menuList);
 
 //FUNCTIONS
 
+//This function renders the 3 projects that are left after getting a random one
+
+function getLeftProjects(projects,id){
+    
+    if(id === 1){
+        projectsBoxRandom.innerHTML ="";
+        let leftProjects = projects.filter(project => project.uuid != 1);
+        for( element of leftProjects){
+            let html=`<article class="single-project">
+            <img src="${element.image}" alt="${element.name} picture" />
+            <div class="text">
+            <h4>${element.name}</h4>
+            <p>${element.description}</p>
+            <a href="">Learn More</a>
+            </div>
+            </article>`;
+            
+            projectsBoxRandom.innerHTML += html;
+        }
+    }
+    if(id === 2){
+        projectsBoxRandom.innerHTML ="";
+        let leftProjects = projects.filter(project => project.uuid != 2);
+        for( element of leftProjects){
+            let html=`<article class="single-project">
+            <img src="${element.image}" alt="${element.name} picture" />
+            <div class="text">
+            <h4>${element.name}</h4>
+            <p>${element.description}</p>
+            <a href="">Learn More</a>
+            </div>
+            </article>`;
+            
+            projectsBoxRandom.innerHTML += html;
+        }
+    }
+    if(id === 3){
+        projectsBoxRandom.innerHTML ="";
+        let leftProjects = projects.filter(project => project.uuid != 3);
+        for( element of leftProjects){
+            let html=`<article class="single-project">
+            <img src="${element.image}" alt="${element.name} picture" />
+            <div class="text">
+            <h4>${element.name}</h4>
+            <p>${element.description}</p>
+            <a href="">Learn More</a>
+            </div>
+            </article>`;
+            
+            projectsBoxRandom.innerHTML += html;
+        }
+    }
+    if(id === 4){
+        projectsBoxRandom.innerHTML ="";
+        let leftProjects = projects.filter(project => project.uuid != 4);
+        for( element of leftProjects){
+            let html=`<article class="single-project">
+            <img src="${element.image}" alt="${element.name} picture" />
+            <div class="text">
+            <h4>${element.name}</h4>
+            <p>${element.description}</p>
+            <a href="">Learn More</a>
+            </div>
+            </article>`;
+            
+            projectsBoxRandom.innerHTML += html;
+        }
+    }
+
+}
+
 //This function renders a random main project
 function getRandomProject(projects){
-    console.log('ey')
+    
     let id = getRandom();
     for(let project of projects){
-        console.log(projects)
+       
         if(id === parseInt(project.uuid)){
             mainProjectRandom.innerHTML = `<h1>${project.name}</h1>
             <div class='details'>
@@ -59,6 +130,7 @@ function getRandomProject(projects){
             </div>`
         }
     }
+    getLeftProjects(projects, id)
    
 
 };
@@ -76,7 +148,7 @@ function getRandom(){
 //This function toggles the menu
 function displayMenu(){
     
-    console.log('Display menu')
+    
     menuList.classList.toggle('hidden')
 
 }
