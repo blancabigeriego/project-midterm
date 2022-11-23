@@ -1,4 +1,4 @@
-'use strict';
+
 //GET ELEMENTS FROM THE DOM
 
 //From Home Page
@@ -8,6 +8,7 @@ const projectsBox = document.querySelector('.box');
 //From Projects Page
 const mainProjectSection = document.querySelector('#project');
 const projectsBoxProjectPage = document.querySelector('.box-1');
+
 
 
 
@@ -29,7 +30,11 @@ function getData(){
 //FUNCTIONS
 
 
+
+
 //This function renders the other projects on Project Page
+
+
 
 function renderProjectsProjectPage(projects, id){
     
@@ -181,6 +186,7 @@ function sortData(projects){
    
         renderMainProject(projects);
         
+        
     }
     if(window.location.href.includes('home')){
         renderProjectsHomePage(projects);
@@ -198,4 +204,12 @@ window.onload = (event) =>{
     getData();
     
     
-}
+};
+
+
+
+ 
+
+
+
+
