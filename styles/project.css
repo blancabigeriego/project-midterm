@@ -420,6 +420,15 @@ html{
         justify-content: space-between;
         align-items: center;
         gap: 200px;
+        
+    }
+
+    .box-1 article{
+        transition: 1s;
+    }
+    .box-1 article:hover{
+        background-color: antiquewhite;
+        width: 49%;
     }
 
     .single-project{
