@@ -416,6 +416,11 @@ html{
     color:#6B708D;
     font-size: 0.4rem;
     text-decoration: none;
+    transition: 0.3s;
+}
+.links a:hover{
+    color:#072AC8;
+    font-weight: bold;
 }
 
 
