@@ -541,17 +541,20 @@ html{
     }
     .desktopNav >li{
         list-style: none;
-        transition: 0.3s;
+        
         
     }
     .desktopNav li a{
         text-decoration: none;
+        color:#292E47;
+        transition: 0.3s;
     }
-    .desktopNav li:hover{
+    .desktopNav li a:hover{
         color:#072AC8;
         font-size: 1.3rem;
     }
     
+
   
     .btn{
         background-color: #072AC8;
