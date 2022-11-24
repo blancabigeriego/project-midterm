@@ -239,7 +239,12 @@ function renderProjectsHomePage(arr){
     }
 }
 
-
+function spinner(){
+    console.log('spinner')
+    let spinnerContainer = document.getElementById('load-container');
+    spinnerContainer.style.visibility = 'hidden';
+    spinnerContainer.style.opacity = '0';
+}
 
 //This calls every render function and passes the data that was fetched from API
 
@@ -255,6 +260,9 @@ function sortData(projects){
         renderProjectsHomePage(projects);
         
     }
+    if(window.location.href.includes('contact')){
+        
+    }
 }
 
 
@@ -265,7 +273,7 @@ window.onload = (event) =>{
     
     
     getData();
-    
+    spinner();
     
 };
 
