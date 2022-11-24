@@ -178,7 +178,8 @@ function validateForm(ev){
     if(!checkEmail.test(emailInput.value)){
         warningMessageEmail.innerHTML = "**You must enter a correct email!!";
         form.appendChild(warningMessageEmail);
-    }else{
+    }
+    if(nameInput.value != "" && checkEmail.text(emailInput.value) && phoneInput.value != "" && message.value!= ""){
         warningMessage.innerHTML = "Thank you for contacting us!! We will get back to you as soon as possible! :)";
         warningMessageEmail.innerHTML = "";
     }
