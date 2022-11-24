@@ -160,6 +160,7 @@ function validateForm(ev){
     ev.preventDefault();
     if(nameInput.Value === "" || emailInput.value ==="" || phoneInput.value === "" || message.value === ""){
         let message = document.createElement('p');
+        message.classList.add('form-message')
         message.innerHTML = "**You must fill all the fields!!";
         form.appendChild(message);
 
