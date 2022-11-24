@@ -6,7 +6,9 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
-/*header*/
+
+/*navbar*/
+
 #header{
     position: fixed;
     top:0;
@@ -68,6 +70,7 @@ html{
     color:#FFC600;
     transform: scale(1.1);
 }
+
 
 
 /*project*/
@@ -291,8 +294,9 @@ html{
 /*mediaqueries desktop*/
 @media all and (min-width: 1250px){
 
-    
-    /*header*/
+
+/*header*/
+   
     #header{
         justify-content: space-between;
         height: 13%;
@@ -313,17 +317,20 @@ html{
     }
     .desktopNav >li{
         list-style: none;
-        transition: 0.3s;
+        
         
     }
     .desktopNav li a{
         text-decoration: none;
+        color:#292E47;
+        transition: 0.3s;
     }
-    .desktopNav li:hover{
+    .desktopNav li a:hover{
         color:#072AC8;
         font-size: 1.3rem;
     }
     
+
   
     .btn{
         background-color: #072AC8;

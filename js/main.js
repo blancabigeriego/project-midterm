@@ -32,7 +32,7 @@ menuList.setAttribute('class', 'hidden');
 menuList.classList.add('navUl');
 
 
-menuList.innerHTML = `<li class='menuElement'><a href='#hero' onclick="displayMenu()">Home</a></li><li class='menuElement'><a href='./project.html' onclick="displayMenu(), refreshData()">Projects</a></li><li class='menuElement'><a href='#services' onclick="displayMenu()">Services</a></li><li class='menuElement'><a href='../html/contact.html'>Contact Us</a></li>`;
+menuList.innerHTML = `<li class='menuElement'><a href='./home.html' onclick="displayMenu()">Home</a></li><li class='menuElement'><a href='./project.html' onclick="displayMenu(), refreshData()">Projects</a></li><li class='menuElement'><a href='./home.html#services' onclick="displayMenu()">Services</a></li><li class='menuElement'><a href='../html/contact.html'>Contact Us</a></li>`;
 navBar.appendChild(menuList);
 
 
