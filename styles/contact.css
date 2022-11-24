@@ -202,13 +202,14 @@ html{
 }
 .desktopNav >li{
     list-style: none;
-    transition: 0.3s;
+   
     
 }
 .desktopNav li a{
     text-decoration: none;
+    transition: 0.3s;
 }
-.desktopNav li:hover{
+.desktopNav li a:hover{
     color:#072AC8;
     font-size: 1.3rem;
 }
@@ -274,6 +275,10 @@ main{
     color: #072AC8;
     border: 1px dotted #072AC8;
     font-weight: bold;
+   }
+
+   .form-message{
+    font-size: 3rem;
    }
 
    /*footer*/
