@@ -6,6 +6,42 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
+/*spinner*/
+*,*:after, *before:{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#load-container{
+    background-color: rgba(250, 240, 245, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: 1s ease;
+    z-index: 10000;
+}
+#load{
+    border: 15px solid #ccc;
+    border-top-color: #072AC8;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    animation: spin 1.5s linear infinite;
+
+}
+@keyframes spin{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
 /*navbar*/
 
 #header{
@@ -483,7 +519,11 @@ html{
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
+    
+
    }
+   
+   
    .single-project{
     width: 40%;
     margin: 0 auto;
@@ -663,6 +703,17 @@ html{
     .box{
         gap: 110px;
     }
+    .box article{
+        transition: 1s;
+        
+       }
+    .box article:hover{
+        width: 49%;
+       }
+    .box article a{
+        cursor:pointer;
+       }
+    
     .single-project h4{
         font-size: 1.438rem;
     }
@@ -771,7 +822,13 @@ html{
      padding: 1rem;
      display: flex;
      flex-direction: column;
+     transition: 1s;
 
+    }
+    .services-container article:hover{
+        width: 49%;
+        
+        background-color: antiquewhite;
     }
 
     .services-container article div{

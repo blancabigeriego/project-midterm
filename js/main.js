@@ -27,6 +27,10 @@ const projectsBoxRandom = document.querySelector('.box-1');
 //CREATE ELEMENTS IN THE DOM
 
 const menuList = document.createElement('ul');
+let warningMessage = document.createElement('p');
+let warningMessageEmail = document.createElement('p');
+warningMessage.classList.add('form-message');
+warningMessageEmail.classList.add('form-message');
 
 menuList.setAttribute('class', 'hidden');
 menuList.classList.add('navUl');
@@ -158,19 +162,28 @@ function displayMenu(){
 
 function validateForm(ev){
     ev.preventDefault();
+    const checkEmail =/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+   
+   
     
-
-    if(nameInput.Value === "" || emailInput.value ==="" || phoneInput.value === "" || message.value === ""){
-        let message = document.createElement('p');
-        message.classList.add('form-message')
-        message.innerHTML = "**You must fill all the fields!!";
-        form.appendChild(message);
+    if(nameInput.value === "" || emailInput.value ==="" || phoneInput.value === "" || message.value === ""){
+        
+        warningMessage.innerHTML = "**You must fill all the fields!!";
+        form.appendChild(warningMessage);
 
     }
     if(nameInput.value.toLowerCase() === "ironhack" ){
         alert("You cannot be Ironhack, because I am Ironhack.")
     }
-}
+    if(!checkEmail.test(emailInput.value)){
+        warningMessageEmail.innerHTML = "**You must enter a correct email!!";
+        form.appendChild(warningMessageEmail);
+    }else{
+        warningMessage.innerHTML = "Thank you for contacting us!! We will get back to you as soon as possible! :)";
+        warningMessageEmail.innerHTML = "";
+    }
+   
+};
 
 //EVENT LISTENERS
 
