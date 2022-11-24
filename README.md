@@ -1,5 +1,10 @@
 # Welcome to Circle!
 
+
+![Home Page](wireframes/hompage.png)
+![Project Page](wireframes/projectpage.png)
+![Contact Page](wireframes/contactpage.png)
+
 ## Project Description
 This is a website for "Circle" a company that desings and develops websites and apps.
 It is composed of three pages:
