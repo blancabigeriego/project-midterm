@@ -8,6 +8,8 @@ It is composed of three pages:
  - Project Page: Here you get to see the projects in more detail. You can click on the one you would like to see. Also, you have a section to ask them questions.
  - Contact Page: Here you can find a form to send a message to Circle and let them know about any doubts that you have.
 
+ ## WIREFRAMES:
+![For tablet and mobile](wireframes/wire.png)
 ## About the website
 
  1. **Design:**
@@ -31,4 +33,13 @@ It is composed of three pages:
  
  ## Technologies used:
 For this project I have used **Vanilla Javascript** in order to get all the funcionalities.
-For the layout I used **HTML** and **CSS**, and the responsive design it´s been implemented using mediaqueries.
+For the layout I used **HTML** and **CSS**, and the responsive design it´s been implemented using mediaqueries, and following a mobile first approach.
+
+# Link to website
+[Visit Circle](https://circle-blanca.netlify.app/html/home.html)
+
+## Future work
+Implementing more functionalities to the website like receiving something when the user sends a form.
+
+## Resources
+I used a design provided in Figma by my teachers and the usual sources to get information like stackoverflow, the Ironhack website and internet videos.
