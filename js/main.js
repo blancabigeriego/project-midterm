@@ -123,7 +123,7 @@ function getRandomProject(projects){
             mainProjectRandom.innerHTML = `<h1>${project.name}</h1>
             <div class='details'>
             <h2>${project.description}</h2>
-            <p><strong class="colour">Completed on</strong>${project.completed_on}</p>
+            <p><strong class="colour">Completed on </strong>${project.completed_on}</p>
             </div>
             <div class="project-container">
             <img src="${project.image}" alt="${project.name} picture" />
