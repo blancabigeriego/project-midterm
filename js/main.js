@@ -12,6 +12,7 @@ function refreshData(){
 //FROM ALL PAGES
 const burgerMenu = document.querySelector('.fa-bars');
 const navBar = document.querySelector('.nav');
+const randomLink = document.querySelector('.random-link');
 //FROM CONTACT PAGE
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
@@ -122,7 +123,7 @@ function getRandomProject(projects){
             mainProjectRandom.innerHTML = `<h1>${project.name}</h1>
             <div class='details'>
             <h2>${project.description}</h2>
-            <p><strong class="colour">Completed on</strong>${project.completed_on}</p>
+            <p><strong class="colour">Completed on </strong>${project.completed_on}</p>
             </div>
             <div class="project-container">
             <img src="${project.image}" alt="${project.name} picture" />
@@ -168,6 +169,7 @@ function validateForm(ev){
 //EVENT LISTENERS
 
 burgerMenu.addEventListener('click', displayMenu);
+randomLink.addEventListener('click', refreshData);
 
 //EVENT LISTENER ONLY FOR CONTACT PAGE
 if(window.location.href.includes('contact')){

@@ -149,7 +149,7 @@ async function renderMainProject(projects,id){
     mainProjectSection.innerHTML = `<h1>${mainProject[0].name}</h1>
     <div class='details'>
     <h2>${mainProject[0].description}</h2>
-    <p><strong class="colour">Completed on</strong>${mainProject[0].completed_on}</p>
+    <p><strong class="colour">Completed on</strong> ${mainProject[0].completed_on}</p>
     </div>
     <div class="project-container">
     <img src="${mainProject[0].image}" alt="${mainProject[0].name} picture" />

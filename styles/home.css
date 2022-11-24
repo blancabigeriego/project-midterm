@@ -32,6 +32,9 @@ html{
     padding: 1rem;
    
 }
+.desktopNav{
+    display: none;
+}
 .hidden{
     display:none;
 }
@@ -71,7 +74,7 @@ html{
 /*hero*/
 #hero{
     position:relative;
-    top: 75px;
+    top: 130px;
 }
 .hero-container{
     margin: 20px 30px;
@@ -89,7 +92,7 @@ html{
     text-align: center;
     font-weight: 400;
     color:#6B708D;
-    margin: 0rem 3rem 1rem 0;
+    margin: 1.5rem 1.4rem 2rem 1.4rem;
 }
 .hero-buttons{
     display: flex;
@@ -103,11 +106,11 @@ html{
     text-align: center;
     font-weight: 400;
     width: 100px;
-    padding: 3px 3px;
+    padding: 12px 3px;
 }
 .blue-btn{
     background-color: #072AC8;
-   
+    font-weight: bold;
     color: #F2F4FC
 }
 .imgs-div{
@@ -117,7 +120,7 @@ html{
 /*clients*/
 #clients{
     position:relative;
-    top: 90px;
+    top: 180px;
 
 }
 #clients div{
@@ -132,16 +135,17 @@ html{
 /*projects*/
 #projects{
     position: relative;
-    top: 100px;
+    top: 200px;
     
 }
 
 .projects-container{
-    margin: 20px 30px;
+    margin: 20px 20px;
 }
 .projects-container h2{
     text-align: center;
     color: #292E47;
+    margin-bottom: 3rem;
 }
 .box{
     display: flex;
@@ -154,20 +158,26 @@ html{
     width: 74%;
     margin: 0px;
     background-color: white;
+    padding-bottom: 20px;;
     align-self: center;
     box-shadow: 0px 10px 50px rgb(0, 0, 0, .25);
+   
+}
+.single-project:hover{
+    background-color: antiquewhite;
 }
 .single-project > img{
     width: 100%;
     height: 50%;
     margin: 0px;
+    
 }
 .single-project > h4{
     
     margin: 0px;
     padding: 5px 0px 10px 15px;
     color:#292E47;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     
     
 }
@@ -175,7 +185,7 @@ html{
     
     margin-top: 0px;
     padding: 50px 0px 10px 10px;
-    font-size: 0.938rem;
+    font-size: 0.9rem;
     color: #292E47;
     font-weight: 400;
 }
@@ -183,10 +193,11 @@ html{
     
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 10px 0px 10px 20px;
+    padding: 10px 0px 20px 10px;
     text-decoration: none;
     color: #072AC8;
     font-size: 0.938rem;
+    cursor: pointer;
     
 }
 
@@ -194,7 +205,7 @@ html{
 
 #testimonials{
     position: relative;
-    top: 120px;
+    top: 240px;
     background-color: #292E47;
     background-image: url("../images/orbit.png");
     background-position: 0 0;
@@ -264,7 +275,7 @@ html{
 
 #services{
     position:relative;
-    top: 130px;
+    top: 280px;
     
 }
 
@@ -285,7 +296,7 @@ html{
 .services-container article{
     background-color: white;
     width: 78%;
-   
+    padding-bottom: 20px;
     box-shadow: 0px 10px 50px rgb(0, 0, 0, .25);
 }
 .services-container article div{
@@ -313,24 +324,23 @@ html{
     color: #6B708D;
     text-align: center;
     font-size: 0.7rem;
-    margin: 0 1.875rem 1.2rem;
+    margin: 0 1.875rem 3rem;
     line-height: 1rem;
 }
 .services-container article a{
     color: #072AC8;
     text-decoration: none;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    
-
+    cursor: pointer;
 }
 
 
 /*cta*/
 #cta{
     position: relative;
-    top: 12.5rem;
+    top: 18.5rem;
     margin: 0 1rem;
     background-color: #FFC600;
     
@@ -352,14 +362,14 @@ html{
 
 #cta form input{
     font-size: 0.5rem;
-    padding: 12px 0px 12px 50px;
+    padding: 14px 0px 14px 50px;
     border: none;
     position: relative;
     outline: none;
 }
 #cta form button{
     font-size: 0.5rem;
-    padding: 12px 58px;
+    padding: 14px 58px;
     border: none;
     background-color:  #072AC8;
     color: #F2F4FC;
@@ -379,7 +389,7 @@ html{
 /*footer*/
 #footer{
     position: relative;
-    top: 300px;
+    top: 340px;
     width: 80%;
     margin: 0 auto;
 }
@@ -409,27 +419,27 @@ html{
 }
 
 
-/*media-queries tablet: from 421 to 899px*/
+/*media-queries tablet: from 421 */
 
-@media all and (min-width: 421px) and (max-width: 899px){
+@media all and (min-width: 421px) {
 
     /*hero*/
     #hero div{
         display: flex;
     }
     .hero-text{
-        width: 50%;
+        width: 49%;
     }
    .imgs-div{
     display: flex;
-    width: 50%;
+    width: 49%;
     top: 0;
     right: 0rem;
     position: relative;
    }
    .imgs-container{
     top: 0;
-    right: 0rem;
+    right: -6rem;
     position: relative;
    }
    .card-1{
@@ -455,13 +465,13 @@ html{
    /*clients*/
 
    #clients{
-    top: 110px;
+    top: 190px;
    }
 
    /*projects*/
 
    #projects{
-    top: 140px;
+    top: 250px;
    }
    .box{
     margin-top: 2rem;
@@ -482,12 +492,12 @@ html{
 
    /*testimonials*/
    #testimonials{
-    top: 180px;
+    top: 300px;
    }
 
    /*services*/
    #services{
-    top: 230px;
+    top: 350px;
    }
    .services-container{
     flex-direction: row;
@@ -499,16 +509,16 @@ html{
 
    /*cta*/
    #cta{
-    top:300px;
+    top:400px;
    }
    
    /*footer*/
    #footer{
-    top:350px;
+    top:450px;
    }
 }
 
-@media all and (min-width: 900px){
+@media all and (min-width: 1250px){
 
     /*header*/
     #header{
@@ -519,26 +529,29 @@ html{
         width: 4rem;
         padding-left: 5rem;
     }
-    .fa-bars{
+    .fa-solid.fa-bars{
         display: none;
     }
-    .hidden{
+    .desktopNav{
         display: flex;
         gap: 3rem;
         font-size: 1.063rem;
         font-weight: 500;
         
     }
-    .hidden >li{
+    .desktopNav >li{
         list-style: none;
+        transition: 0.3s;
         
     }
-    .hidden li a{
+    .desktopNav li a{
         text-decoration: none;
     }
-    .blue{
-        color: #072AC8;
+    .desktopNav li:hover{
+        color:#072AC8;
+        font-size: 1.3rem;
     }
+    
   
     .btn{
         background-color: #072AC8;
@@ -546,6 +559,12 @@ html{
         text-decoration: none;
         margin-right: 5rem;
         padding: 0.7rem 1.2rem;
+        transition: 0.3s;
+    }
+    .btn:hover{
+        background-color: #F2F4FC;
+        color: #072AC8;
+        border: 1px dotted #072AC8;
     }
 
     main{
@@ -554,22 +573,24 @@ html{
 
     /*hero*/
     #hero{
-        top: 95px;
+        top: 195px;
         margin: 3rem;
         
     }
     .hero-text{
-        width: 55%;
+        width: 45%;
+        margin: 0 100px;
     }
     .hero-text h1{
         text-align: left;
         font-size: 60px;
-        margin-bottom: 1.2rem;
+        margin-bottom: 2rem;
     }
     .hero-text p{
         text-align: left;
         font-size: 17px;
-        margin-bottom: 1.2rem;
+        margin-bottom: 2rem;
+        margin-left:0;
     }
     .hero-buttons{
         justify-content: left;
@@ -579,9 +600,25 @@ html{
         font-size: 17px;
         padding: 1rem 1.2rem;
     }
+    .link-work{
+        transition:0.3s;
+        cursor: pointer;
+    }
+    .link-work:hover{
+        color: #072AC8;
+        font-weight: bolder;
+    }
+    .blue-btn{
+        transition: 0.3s;
+    }
+    .blue-btn:hover{
+        background-color: #F2F4FC;
+        color: #072AC8;
+        border: 1px dotted #072AC8;
+    }
 
     .imgs-div{
-        width: 45%;
+        width: 55%;
         
     }
 
@@ -594,30 +631,43 @@ html{
        .card-1{
         position: absolute;
         width: 17rem;
-        right: -15rem;
+        right: -12rem;
         top: 0rem;
         z-index: 1;
        }
        .card-2{
         position: absolute;
         width: 16rem;
-        right: -30rem;
+        right: -33rem;
         top: 24rem;
         z-index: 1;
        }
        .client{
         position: absolute;
-        width: 27.5rem;
+        width: 30.5rem;
         right: -28rem;
         top: 0rem;
        }
 
     
+    /*projects*/
 
+    .box{
+        gap: 110px;
+    }
+    .single-project h4{
+        font-size: 1.438rem;
+    }
+    .single-project p{
+        font-size: 1.063rem;
+    }
+    .single-project a{
+        font-size: 1.063rem;
+    }
 
     /*clients*/
     #clients{
-        top: 300px;
+        top: 450px;
        
     }
 
@@ -627,12 +677,12 @@ html{
     }
     #clients div img{
         width: 5rem;
-         filter: grayscale(1);
+        filter: grayscale(1);
         
     }
     /*projects*/
     #projects{
-        top: 450px;
+        top: 600px;
         
     }
 
@@ -660,7 +710,9 @@ html{
     /*testimonials*/
 
     #testimonials{
-        top: 550px;
+        top: 800px;
+        margin: 0 1.5rem;
+        
     }
 
     .testimonials-text h2{
@@ -695,7 +747,7 @@ html{
 
     /*services*/
     #services{
-        top: 700px;
+        top: 1000px;
     }
 
     #services h2{
@@ -707,7 +759,7 @@ html{
     }
 
     .services-container article{
-     height: 25rem;
+     height: 24rem;
      padding: 1rem;
      display: flex;
      flex-direction: column;
@@ -745,7 +797,7 @@ html{
     
    
     #cta{
-        top: 900px;
+        top: 1200px;
     }
 
     #cta h2{
@@ -774,6 +826,12 @@ html{
     #cta form button{
         margin: 0;
         font-size: 1.063rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    #cta form button:hover{
+        font-size: 1.5rem;
+        font-weight: bold;
     }
 
     
@@ -791,7 +849,7 @@ html{
 
     /*footer*/
     #footer{
-        top: 1000px;
+        top: 1400px;
     }
     .content img{
         width: 6.149rem;

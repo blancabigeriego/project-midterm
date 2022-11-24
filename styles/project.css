@@ -31,6 +31,9 @@ html{
     padding: 1rem;
    
 }
+.desktopNav{
+    display: none;
+}
 .hidden{
     display:none;
 }
@@ -67,11 +70,10 @@ html{
 }
 
 
-
 /*project*/
 #project {
     position: relative;
-    top: 2rem;
+    top: 4rem;
     margin: 2.7rem 1.2rem;
 }
 
@@ -114,7 +116,7 @@ html{
 /*other projects*/
 #projects{
     position: relative;
-    top: 2rem;
+    top: 4rem;
     margin: 2.7rem 1.2rem;
 }
 #projects h2{
@@ -169,7 +171,7 @@ html{
 /*cta*/
 #cta{
     position: relative;
-    top: 5rem;
+    top: 6rem;
     margin: 0 1rem;
     background-color: #FFC600;
     
@@ -218,7 +220,7 @@ html{
 /*footer*/
 #footer{
     position: relative;
-    top: 300px;
+    top: 200px;
     width: 80%;
     margin: 0 auto;
 }
@@ -249,15 +251,15 @@ html{
 
 /*mediaqueries*/
 
-@media all and (min-width: 420px){
+@media all and (min-width: 421px){
 
     /*section project*/
    #project{
-    top: 2.8rem;
+    top: 8rem;
    }
    /*section other projects*/
    #projects{
-    top:2.8rem;
+    top:12rem;
    }
    .box-1{
     flex-direction: row;
@@ -270,21 +272,26 @@ html{
     }
 
     /*section cta*/
+
+    #cta{
+        top: 14rem;
+    }
     #cta h2, #cta p{
         margin: 0;
     }
 
     /*footer*/
     #footer{
-        top: 9rem;
+        top: 16rem;
         font-size: 0.5rem;
     }
    
 }
 
 /*mediaqueries desktop*/
-@media all and (min-width: 900px){
+@media all and (min-width: 1250px){
 
+    
     /*header*/
     #header{
         justify-content: space-between;
@@ -294,22 +301,27 @@ html{
         width: 4rem;
         padding-left: 5rem;
     }
-    .fa-bars{
+    .fa-solid.fa-bars{
         display: none;
     }
-    .hidden{
+    .desktopNav{
         display: flex;
         gap: 3rem;
         font-size: 1.063rem;
         font-weight: 500;
         
     }
-    .hidden >li{
+    .desktopNav >li{
         list-style: none;
+        transition: 0.3s;
         
     }
-    .hidden li a{
+    .desktopNav li a{
         text-decoration: none;
+    }
+    .desktopNav li:hover{
+        color:#072AC8;
+        font-size: 1.3rem;
     }
     
   
@@ -319,6 +331,12 @@ html{
         text-decoration: none;
         margin-right: 5rem;
         padding: 0.7rem 1.2rem;
+        transition: 0.3s;
+    }
+    .btn:hover{
+        background-color: #F2F4FC;
+        color: #072AC8;
+        border: 1px dotted #072AC8;
     }
 
     main{
@@ -328,7 +346,8 @@ html{
     /*project*/
 
     #project{
-        top: 150px;
+        top: 300px;
+        margin: 0 70px;
     }
 
     #project h1{
@@ -369,7 +388,8 @@ html{
     /*projects*/
 
     #projects{
-        top: 250px;
+        top: 350px;
+        margin: 0 70px;
     }
 
     #projects h2{
@@ -378,20 +398,22 @@ html{
         text-transform: capitalize;
         text-align: left;
         margin-bottom: 4rem;
+        
     }
 
     .box-1{
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+        gap: 200px;
     }
 
     .single-project{
-        width: 21.25rem;
+        width: 33%;
     }
 
     .single-project img{
-        width: 21.25rem;
+        width: 100%;
     }
 
     .single-project h4{
@@ -425,7 +447,9 @@ html{
     
    
   #cta{
-    top: 400px;
+    top: 600px;
+    margin: 0 70px;
+    height: 50vh;
 }
 
 #cta h2{
@@ -473,7 +497,7 @@ font-size: 1.063rem;
 
     /*footer*/
     #footer{
-        top: 500px;
+        top: 800px;
         margin-bottom: 3rem;
     }
     .content img{

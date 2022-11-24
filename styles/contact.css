@@ -8,6 +8,7 @@ html{
 
 /*navbar*/
 
+
 #header{
     position: fixed;
     top:0;
@@ -31,6 +32,9 @@ html{
     color: #292E47;
     padding: 1rem;
    
+}
+.desktopNav{
+    display: none;
 }
 .hidden{
     display:none;
@@ -160,52 +164,73 @@ html{
 
 /*mediaqueries*/
 
-@media all and (min-width: 421px), all and (max-width: 899px){
+@media all and (min-width: 421px){
     #contact form{
-        margin: 0 2rem;
+        margin: 0 4rem;
+    }
+    #contact h1{
+        margin: 2rem 4rem;
     }
 }
 
-@media all and (min-width: 900px){
+@media all and (min-width: 1250px){
     #contact{
         margin: 0 6rem;
     }
-    #header{
-        justify-content: space-between;
-        height: 13%;
-    }
-    #header img{
-        width: 4rem;
-        padding-left: 5rem;
-    }
-    .fa-bars{
-        display: none;
-    }
-    .hidden{
-        display: flex;
-        gap: 3rem;
-        font-size: 1.063rem;
-        font-weight: 500;
-        
-    }
-    .hidden >li{
-        list-style: none;
-        
-    }
-    .hidden li a{
-        text-decoration: none;
-    }
-    .blue{
-        color: #072AC8;
-    }
-  
-    .btn{
-        background-color: #072AC8;
-        color: #F2F4FC;
-        text-decoration: none;
-        margin-right: 5rem;
-        padding: 0.7rem 1.2rem;
-    }
+
+   
+
+
+    /*header*/
+   #header{
+    justify-content: space-between;
+    height: 13%;
+}
+#header img{
+    width: 4rem;
+    padding-left: 5rem;
+}
+.fa-solid.fa-bars{
+    display: none;
+}
+.desktopNav{
+    display: flex;
+    gap: 3rem;
+    font-size: 1.063rem;
+    font-weight: 500;
+    
+}
+.desktopNav >li{
+    list-style: none;
+    transition: 0.3s;
+    
+}
+.desktopNav li a{
+    text-decoration: none;
+}
+.desktopNav li:hover{
+    color:#072AC8;
+    font-size: 1.3rem;
+}
+
+
+.btn{
+    background-color: #072AC8;
+    color: #F2F4FC;
+    text-decoration: none;
+    margin-right: 5rem;
+    padding: 0.7rem 1.2rem;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: #F2F4FC;
+    color: #072AC8;
+    border: 1px dotted #072AC8;
+}
+
+main{
+    margin: 0 3rem;
+}
 
     /*contact form*/
 
@@ -240,6 +265,15 @@ html{
     margin-top: 2rem;
     height: 4.375rem;
     font-size: 1.063rem;
+    transition: 0.3s;
+    cursor: pointer;
+   }
+   
+   #contact form button:hover{
+    background-color: #F2F4FC;
+    color: #072AC8;
+    border: 1px dotted #072AC8;
+    font-weight: bold;
    }
 
    /*footer*/
