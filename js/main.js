@@ -164,9 +164,10 @@ function validateForm(ev){
     ev.preventDefault();
     const checkEmail =/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
    
-   
+   warningMessage.innerHTML = "";
+   warningMessageEmail.innerHTML = "";
     
-    if(nameInput.value === "" || emailInput.value ==="" || phoneInput.value === "" || message.value === ""){
+    if(nameInput.value === "" || emailInput.value ==="" || phoneInput.value === "" || textArea.value === ""){
         
         warningMessage.innerHTML = "**You must fill all the fields!!";
         form.appendChild(warningMessage);
@@ -179,7 +180,7 @@ function validateForm(ev){
         warningMessageEmail.innerHTML = "**You must enter a correct email!!";
         form.appendChild(warningMessageEmail);
     }
-    if(nameInput.value != "" && checkEmail.text(emailInput.value) && phoneInput.value != "" && message.value!= ""){
+    if(nameInput.value != "" && checkEmail.test(emailInput.value) && phoneInput.value != "" && textArea.value!= ""){
         warningMessage.innerHTML = "Thank you for contacting us!! We will get back to you as soon as possible! :)";
         warningMessageEmail.innerHTML = "";
     }
